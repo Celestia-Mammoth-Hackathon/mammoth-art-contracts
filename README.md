@@ -25,9 +25,9 @@ RPC_URL=your_rpc_url_here
 
 ### Usage
 
-#### Compile Contracts
+#### Build Contracts
 ```bash
-yarn compile
+yarn build
 ```
 
 #### Run Tests
