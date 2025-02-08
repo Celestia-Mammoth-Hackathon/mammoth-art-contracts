@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  indexer:
+    build:
+      context: ../../
+      dockerfile: docker/ponder/Dockerfile
+    ports:
+      - "127.0.0.1:42069:42069"
+    environment:
+      - PONDER_RPC_URL=https://rpc.sketchpad-1.forma.art
+      - PONDER_CHAIN_ID=984123
+      - PONDER_START_BLOCK=584693
+      - PONDER_DROP_ADDRESS=0x122987bD1E1EaDCb0A68E220f272358B854159d7
+      - PONDER_MARKETPLACE_ADDRESS=0x83c62Cc36B792eE22ba14e74E07Ab05eC2630d1b
+      - PONDER_ERC1155_ADDRESSES=0xb6617f457b33e02e6bdd973c29376a192a5b0908,0x063eA336c397d8112bcd7707164148cCCBEfB218
+      - PONDER_FINIS_ERC721_ADDRESSES=0x2487a76723F010CDE2504f793205B4930e33fb0F
+      - PONDER_ORACLE_ERC721_ADDRESSES=0x4B3d51b872222985744169ab2Dd5A483011A2371
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
+    depends_on:
+      - db
+  db:
+    image: postgres:15
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+volumes:
+  postgres_data:

@@ -1,0 +1,3 @@
+forge-std/=lib/forge-std/src/
+@forma-dev/=node_modules/@forma-dev/
+@openzeppelin/=node_modules/@openzeppelin/

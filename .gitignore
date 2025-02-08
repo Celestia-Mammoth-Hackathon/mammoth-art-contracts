@@ -1,0 +1,10 @@
+/artifacts
+/types
+/dist
+/cache
+/out/
+/broadcast/
+/node_modules
+.env
+.env.testnet
+.env.mainnet

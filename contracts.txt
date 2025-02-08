@@ -1,0 +1,3 @@
+SimpleERC1155Upgradeable deployed to: 0x95712755bCE58D5252DAa1EBd2Db596AB49A6b56
+SimpleDropUpgradeable deployed to: 0xC34F9CAe62247eEf4a945F22dc1Bf3329bc46eC3
+Access Token: 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

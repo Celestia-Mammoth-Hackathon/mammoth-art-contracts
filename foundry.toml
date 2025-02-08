@@ -1,0 +1,12 @@
+[profile.default]
+solc_version = '0.8.24'
+src = 'contracts'
+out = 'out'
+viaIR = true
+libs = ['lib']
+optimizer_runs = 150
+remappings = [
+    'forge-std/=lib/forge-std/src/',
+    '@forma-dev/=node_modules/@forma-dev/',
+    '@openzeppelin/=node_modules/@openzeppelin/',
+]

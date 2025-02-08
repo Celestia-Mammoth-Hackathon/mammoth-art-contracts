@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  indexer:
+    build:
+      context: ../../
+      dockerfile: docker/ponder/Dockerfile
+    ports:
+      - "127.0.0.1:42069:42069"
+    environment:
+      - PONDER_RPC_URL=https://rpc.forma.art
+      - PONDER_CHAIN_ID=984122
+      - PONDER_START_BLOCK=1
+      - PONDER_DROP_ADDRESS=0xd09504c5E298647eC408D9eaD83F7C5730E61C72
+      - PONDER_MARKETPLACE_ADDRESS=0x98DF8F54ac374B5F9d814f09978E5287C27e3Ef6
+      - PONDER_ERC1155_ADDRESSES=0x0aa7a608343FAf8c0Db275205d1eAf70585103e8,0xF14eee1D7eC4A417BFd99c08a4f7fFCA73Ca5DCC,0x1Ac85C299aB35E3dd768F39cA76Ba1bAC56d28f5,0x330491d0a7F74E9592CC6c5b2CE2a25e20206784
+      - PONDER_FINIS_ERC721_ADDRESSES=0xc1A9c67117127c859789c20c4042c0CD87325861
+      - PONDER_ORACLE_ERC721_ADDRESSES=0x33a42f74a770897e0c95439aab415f4806b173f1
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
+    depends_on:
+      - db
+  db:
+    image: postgres:15
+    ports:
+      - "127.0.0.1:6432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+volumes:
+  postgres_data:
