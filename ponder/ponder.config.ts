@@ -13,7 +13,7 @@ export default createConfig({
   },
   database: {
     kind: "postgres",
-    connectionString: "postgresql://postgres:huycoihthd123@localhost:5432/mammoth_art_indexer_postgres",
+    connectionString: "postgresql://postgres:mFEaNehLVwXByDESmqUvWOFetnvHclrN@postgres.railway.internal:5432/railway",
   },
   contracts: {
     Drop: {
