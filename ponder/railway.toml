@@ -1,0 +1,8 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "/ponder/DockerFile.railway"
+
+[deploy]
+healthcheckPath = "/ping"
+healthcheckTimeout = 100
+restartPolicyType = "never"
