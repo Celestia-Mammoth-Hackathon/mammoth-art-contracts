@@ -6,8 +6,8 @@ async function main() {
   const signer = accounts[0];
   console.log("Current signer's address:", signer.address);
 
-  const collectionName = "Test Collection 789";
-  const symbol = "TEST";
+  const collectionName = "Mammoth Art Generative";
+  const symbol = "MAG";
   const royaltyRecipient = "0x75B128c7AE715Ffe273433DbfF63097FDC10804d";
   const royaltyFee = 750;
   const collectionSize = 100;

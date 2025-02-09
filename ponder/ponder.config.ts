@@ -6,29 +6,30 @@ import { generativeERC721UpgradeableAbi } from "./abi/generativeERC721Upgradeabl
 
 export default createConfig({
   networks: {
-    mainnet: {
+    testnet: {
       chainId: Number(process.env.PONDER_CHAIN_ID),
       transport: http(process.env.PONDER_RPC_URL),
     },
   },
   database: {
     kind: "postgres",
+    connectionString: "postgresql://postgres:huycoihthd123@localhost:5432/mammoth_art_indexer_postgres",
   },
   contracts: {
     Drop: {
-      network: "mainnet",
+      network: "testnet",
       abi: simpleDropUpgradeableAbi,
       address: process.env.PONDER_DROP_ADDRESS! as `0x${string}`,
       startBlock: Number(process.env.PONDER_START_BLOCK),
     },
     Marketplace: {
-      network: "mainnet",
+      network: "testnet",
       abi: simpleMarketplaceUpgradeableAbi,
       address: process.env.PONDER_MARKETPLACE_ADDRESS! as `0x${string}`,
       startBlock: Number(process.env.PONDER_START_BLOCK),
     },
     GenerativeERC721: {
-      network: "mainnet",
+      network: "testnet",
       abi: generativeERC721UpgradeableAbi,
       address: process.env.PONDER_GENERATIVE_ERC721_ADDRESSES! as `0x${string}`,
       startBlock: Number(process.env.PONDER_START_BLOCK),

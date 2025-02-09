@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker stop modularium-indexer-postgres
+docker stop mammoth_art_indexer_postgres

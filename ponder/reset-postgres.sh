@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker rm modularium-indexer-postgres
+docker rm mammoth_art_indexer_postgres
 rm -fr ./.postgres-data
