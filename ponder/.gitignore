@@ -19,3 +19,6 @@ yarn-error.log*
 
 # Local postgres
 /.postgres-data/
+
+railway.toml
+Dockerfile.railway
