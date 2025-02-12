@@ -129,5 +129,5 @@ By contributing, you agree that your contributions will be licensed under its MI
 ---
 
 <p align="center">
-  Thank you for contributing to Forma Art! 🎨
+  Thank you for contributing to MammothArt! 🎨
 </p> 
