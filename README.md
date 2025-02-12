@@ -1,110 +1,94 @@
-# 🎨 MammothArt Smart Contracts and Indexer - Dynamic NFT Platform
+# 🔍 MammothArt Indexer
 
-> A revolutionary NFT platform that creates dynamic, influence-based generative art NFTs on the blockchain.
+> High-performance indexer for MammothArt's dynamic NFT platform with GraphQL API support.
 
-## 🌟 Project Overview
+## 🌟 Overview
 
-MammothArt introduces a groundbreaking approach to NFT creation and valuation through our innovative "Influence System". This system dynamically affects NFT rarity and characteristics based on the collector's existing NFT portfolio, creating a more engaging and interconnected digital art ecosystem.
+MammothArt Indexer provides real-time tracking and querying capabilities for our dynamic NFT ecosystem. Built with Ponder, it enables efficient data retrieval through GraphQL for NFT metadata, influence calculations, and marketplace activities.
 
-### 🔥 Key Features
+## ⚡ Key Features
 
-- **Dynamic Rarity System**: NFT characteristics are influenced by the collector's existing NFT holdings
-- **Upgradeable Smart Contracts**: Future-proof architecture using OpenZeppelin's UUPS pattern
-- **Flexible Metadata Management**: Support for both pre-reveal placeholder and post-reveal metadata
-- **Advanced Royalty System**: Configurable royalties at both collection and individual token levels
-- **Secure Minting Controls**: Multi-role system with owner and minter separation
+- **Real-time Indexing**: Track NFT mints, transfers, and metadata updates
+- **GraphQL API**: Flexible queries for NFT data and market analytics
+- **Dynamic Influence Tracking**: Monitor NFT influence calculations
+- **High Performance**: Optimized for quick data retrieval
+- **Multi-Contract Support**: Index multiple NFT collections simultaneously
 
-## 🛠 Technical Architecture
+## 🔍 GraphQL Examples
 
-### Core Smart Contracts
-
-- `GenerativeERC721Upgradeable.sol`: Main contract implementing the influence system
-  - ERC721 compliant
-  - Upgradeable architecture
-  - Dynamic metadata management
-  - Influence calculation system
-
-### Influence System Algorithm
-
-```solidity
-function _calculateRanking(address _minter) internal view returns (uint256) {
-    // Innovative ranking system that considers:
-    // 1. Collector's existing NFT portfolio
-    // 2. Influence weight of each NFT
-    // 3. Dynamic boost calculations
-    // Results in unique rarity characteristics
+```graphql
+# Query all drops created by a specific address
+query AllDrops {
+  drops(
+    orderBy: "id"
+    orderDirection: "desc"
+    where: {creator: "${address}"}
+  ) {
+    items {
+      id
+      startDate
+      endDate
+      maxAllowed
+      maxPerWallet
+      price
+      tokenAddress
+      tokenId
+      minted
+      merkleRoot
+      creator
+    }
+  }
 }
+
+# Get user's NFT portfolio
+query AccountTokenBalances {
+    account(
+      id: "${address}"
+      
+    ) {
+      id
+      tokens(limit: 1000, where: {balance_gt: "0"}) {
+        items {
+          tokenAddress
+          tokenId
+          balance
+        }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+      }
+    }
+  }
 ```
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### Prerequisites
-- Node.js 16.x or higher
-- Yarn package manager
-- Hardhat development environment
 
-### Quick Start
+### Installation
 ```bash
-# Clone repository
-git clone https://github.com/Celestia-Mammoth-Hackathon/mammoth-bros-contracts.git
+# Configure environment
+# Create .env file with:
+PONDER_RPC_URL=https://rpc.sketchpad-1.forma.art
+PONDER_CHAIN_ID=984123
+PONDER_START_BLOCK=584693
+PONDER_DROP_ADDRESS=
+PONDER_MARKETPLACE_ADDRESS=
+PONDER_GENERATIVE_ERC721_ADDRESSES=
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
 
-# Install dependencies
-yarn install
-
-# Set up environment
-cp .env.example .env
-# Add your private key and RPC URL to .env
-
-# Build contracts
-yarn build
-
-# Run tests
-yarn test
-
-# Deploy to testnet
-yarn deploy:testnet
+# Start indexer
+yarn dev
 ```
-
-## 🧪 Testing
-
-Our comprehensive test suite covers:
-- Influence system calculations
-- Minting mechanics
-- Metadata management
-- Access control
-- Upgrade mechanisms
-
-Run tests with:
-```bash
-yarn test
-```
-
-## 📊 Performance & Security
-
-- ✅ Fully audited smart contracts
-- 🔒 Role-based access control
-- ⚡ Gas-optimized operations
-- 🛡️ Emergency pause functionality
-- 🔄 Upgradeable architecture
 
 ## 🌐 Deployment
-- [Generative ERC721](https://explorer.sketchpad-1.forma.art/address/0xE797f81873F37cAd0607FFD4DfE4155fe452776a)
-- [Drop Contract](https://explorer.sketchpad-1.forma.art/address/0x1bC036834BA66EC8073Ced8c1d9490AD67A3A0bC)
-## 🏆 Hackathon Specific Achievements
+- **Indexer API**: [https://mammoth-bros-contracts-production.up.railway.app/](https://mammoth-bros-contracts-production.up.railway.app/)
+- **Contracts Being Indexed**:
+  - [Drop Contract](https://explorer.sketchpad-1.forma.art/address/0x1bC036834BA66EC8073Ced8c1d9490AD67A3A0bC)
+  - [All Generative ERC721]
+  - [All accounts interacting with the contracts]
+  - [All nft minted from the contracts]
 
-- Implemented novel influence-based rarity system
-- Created gas-efficient ranking algorithm
-- Developed flexible metadata management system
-- Built comprehensive testing framework
-- Deployed fully functional testnet implementation
-
-## 🔜 Future Roadmap
-
-- [ ] Enhanced influence calculations
-- [ ] Cross-chain NFT influence support
-- [ ] Dynamic metadata rendering
-- [ ] Community governance integration
-- [ ] Advanced rarity visualization tools
 
 ## 👥 Team
 
@@ -114,11 +98,7 @@ yarn test
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
-We welcome contributions! Please check our [Contributing Guidelines](CONTRIBUTING.md) for details.
+MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
