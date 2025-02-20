@@ -6,10 +6,30 @@ async function main() {
   console.log("Using signer:", signer.address);
 
   // Replace with your deployed contract address
-  const contractAddress = "0xE797f81873F37cAd0607FFD4DfE4155fe452776a";
+  const contractAddress = "0x49d7d6058660EF9107F092C6BF6eeF3989A12fdd";
   const contract = await ethers.getContractAt("GenerativeERC721Upgradeable", contractAddress);
 
   try {
+    // 1. Set contract metadata
+    try {
+      console.log("\nSetting contract metadata...");
+      const setContractMetadataTx = await contract["setContractMetadata((string,string,string,string,string,string,string[]))"]({
+        name: "Generative Art Collection",
+        description: "This is a collection of generative art.",
+        image: "ipfs://QmTVNpEpJewJ6J8evsZ4CTs3AMjtutj9a81GFypHTcCYdY",
+        bannerImage: "",
+        featuredImage: "",
+        externalLink: "",
+        collaborators: []
+      });
+      await setContractMetadataTx.wait();
+      console.log("✅ Contract metadata set successfully");
+    } catch (error: any) {
+      console.error("❌ Error setting contract metadata:", error.message);
+      throw error;
+    }
+    
+
     // 1. Set placeholder metadata (unrevealed state)
     try {
       console.log("\nSetting placeholder metadata...");
@@ -47,6 +67,26 @@ async function main() {
       console.log("✅ Minter role granted successfully");
     } catch (error: any) {
       console.error("❌ Error granting minter role:", error.message);
+      throw error;
+    }
+
+    // 4. Set Influencing NFTs
+    try {
+      console.log("\nSetting influencing NFTs...");
+      const influencingAddresses = [
+        "0x62650662EBB109Fd1E86CBdC0b3126C5895ee492",
+        "0x063eA336c397d8112bcd7707164148cCCBEfB218"
+      ];
+      const influencingTokenIds = [[6, 3, 2], [0, 1, 2]];
+
+      const setInfluencingTx = await contract.setInfluencingNFTs(
+        influencingAddresses,
+        influencingTokenIds
+      );
+      await setInfluencingTx.wait();
+      console.log("✅ Influencing NFTs set successfully");
+    } catch (error: any) {
+      console.error("❌ Error setting influencing NFTs:", error.message);
       throw error;
     }
 
@@ -110,27 +150,6 @@ async function main() {
     //   console.error("❌ Error verifying NFTs:", error.message);
     //   throw error;
 
-    // }
-
-    // // New Test: Set Influencing NFTs
-    // try {
-    //   console.log("\nSetting influencing NFTs...");
-    //   const influencingAddresses = [
-    //     "0x62650662EBB109Fd1E86CBdC0b3126C5895ee492",
-    //     "0x063eA336c397d8112bcd7707164148cCCBEfB218"
-    //   ];
-    //   const influencingTokenIds = [6, 0];
-
-    //   const setInfluencingTx = await contract.setInfluencingNFTs(
-    //     influencingAddresses,
-    //     influencingTokenIds
-    //   );
-    //   await setInfluencingTx.wait();
-    //   console.log("✅ Influencing NFTs set successfully");
-    // } catch (error: any) {
-    //   console.error("❌ Error setting influencing NFTs:", error.message);
-    //   throw error;
-    //   throw error;
     // }
 
     // // Mint 3 more tokens

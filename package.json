@@ -14,7 +14,7 @@
     "/abi"
   ],
   "dependencies": {
-    "@forma-dev/sdk": "0.11.0",
+    "@forma-dev/sdk": "0.13.0",
     "@openzeppelin/contracts": "^5.0.0",
     "@openzeppelin/contracts-upgradeable": "^5.0.0",
     "dotenv": "^16.4.7",

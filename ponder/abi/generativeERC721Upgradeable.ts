@@ -841,6 +841,19 @@ export const generativeERC721UpgradeableAbi = [
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "revealMetadata",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "address",
@@ -1100,9 +1113,9 @@ export const generativeERC721UpgradeableAbi = [
         "type": "address[]"
       },
       {
-        "internalType": "uint256[]",
+        "internalType": "uint256[][]",
         "name": "_tokenIds",
-        "type": "uint256[]"
+        "type": "uint256[][]"
       }
     ],
     "name": "setInfluencingNFTs",

@@ -614,10 +614,10 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.1.1.tgz#b9da6a878a371829a0502c9b6c1c143ef6663f4d"
   integrity sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==
 
-"@forma-dev/sdk@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@forma-dev/sdk/-/sdk-0.11.0.tgz#ab6a686bd87a08900e6a67224450ec592af9b45f"
-  integrity sha512-Q4vnShr3eoCR6j8iQraS7eijCSFZjpxjglx5mtPKsaBVN+YEZ1oSWBJopzpPN7Q4covpXhwpgtlM1/F79rWGMQ==
+"@forma-dev/sdk@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@forma-dev/sdk/-/sdk-0.13.0.tgz#1954fdfe4a951160ba58c9bf581df0b5e25fd9e6"
+  integrity sha512-b4aXx/uuiNJisJUiOVuJ5EH79QAfwakGXJCK2XqB0QfLrXmQZYYYIA2PztIE0p7iweIT7rTXBmnXFASIzL/ZGw==
   dependencies:
     "@hyperlane-xyz/core" "^3.2.0"
     "@openzeppelin/contracts" "^5.0.0"

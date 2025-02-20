@@ -9,17 +9,17 @@ import { BigNumber } from "bignumber.js";
   const drop = {
     recipient: "0xD43a19826F7eD0B0eF68d83148C8E3873F832B0f", // recipient of drop mint revenue
     token: {
-      tokenAddress: "0xE797f81873F37cAd0607FFD4DfE4155fe452776a",
+      tokenAddress: "0xfc579821714c13097d8E50c5A855A99894e19D6a",
       tokenId: 0,
     },
-    maxAllowed: 0,    // 0 mean unlimited
+    maxAllowed: 100,    // 0 mean unlimited
     maxPerWallet: 0,  // 0 mean unlimited
     maxPerToken: 0, // 0 mean unlimited
     maxPerBlock: 0, // 0 mean unlimited,
     reserves: 0, // 0 mean unlimited,
     startDate: Math.floor(new Date('2025-02-08T00:00:00Z').getTime() / 1000),
     endDate: Math.floor(new Date('2025-06-22T00:00:00Z').getTime() / 1000),
-    price: new BigNumber(0.1).times(new BigNumber(10).pow(18)).toFixed(),
+    price: new BigNumber(0.5).times(new BigNumber(10).pow(18)).toFixed(),
     merkleRoot: ethers.encodeBytes32String(""), // no merkle root mints yet
     // merkleRoot: "0x2222000000000000000000000000000000000000000000000000000000000000", // no merkle root mints yet,
   };
