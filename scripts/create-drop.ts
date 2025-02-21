@@ -9,7 +9,7 @@ import { BigNumber } from "bignumber.js";
   const drop = {
     recipient: "0xD43a19826F7eD0B0eF68d83148C8E3873F832B0f", // recipient of drop mint revenue
     token: {
-      tokenAddress: "0xfc579821714c13097d8E50c5A855A99894e19D6a",
+      tokenAddress: "0x6fd7eac0c417D068A424d0ef5eF9d3b058c05580",
       tokenId: 0,
     },
     maxAllowed: 100,    // 0 mean unlimited
