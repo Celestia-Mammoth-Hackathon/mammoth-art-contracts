@@ -1,6 +1,5 @@
 import { ethers, upgrades } from "hardhat";
 import { artifacts } from "hardhat";
-import ERC1967Proxy from '@openzeppelin/upgrades-core/artifacts/@openzeppelin/contracts-v5/proxy/ERC1967/ERC1967Proxy.sol/ERC1967Proxy.json';
 
 async function main() {
   const accounts = await ethers.getSigners();

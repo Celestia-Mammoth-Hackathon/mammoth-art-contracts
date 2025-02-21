@@ -6,7 +6,7 @@ async function main() {
   console.log("Using signer:", signer.address);
 
   // Replace with your deployed contract address
-  const contractAddress = "0x49d7d6058660EF9107F092C6BF6eeF3989A12fdd";
+  const contractAddress = "0x6fd7eac0c417D068A424d0ef5eF9d3b058c05580";
   const contract = await ethers.getContractAt("GenerativeERC721Upgradeable", contractAddress);
 
   try {
@@ -16,7 +16,8 @@ async function main() {
       const setContractMetadataTx = await contract["setContractMetadata((string,string,string,string,string,string,string[]))"]({
         name: "Generative Art Collection",
         description: "This is a collection of generative art.",
-        image: "ipfs://QmTVNpEpJewJ6J8evsZ4CTs3AMjtutj9a81GFypHTcCYdY",
+        // image: "ipfs://QmTVNpEpJewJ6J8evsZ4CTs3AMjtutj9a81GFypHTcCYdY",
+        image: "ipfs://QmTPD8efGxzv4HpQfstTf3nVRXzvzTQkQuZ4EsFPJZzNa6",
         bannerImage: "",
         featuredImage: "",
         externalLink: "",
