@@ -88,8 +88,8 @@ yarn test
 - 🔄 Upgradeable architecture
 
 ## 🌐 Deployment
-- [Generative ERC721](https://explorer.sketchpad-1.forma.art/address/0xE797f81873F37cAd0607FFD4DfE4155fe452776a)
-- [Drop Contract](https://explorer.sketchpad-1.forma.art/address/0x4Bc6C96b6996ecFDF55059d091b38A5EF2836aA0)
+- [Generative ERC721](https://explorer.sketchpad-1.forma.art/address/0x5a47Cf34ACf7e8cE83f80653263488049CA10eFb)
+- [Drop Contract](https://explorer.sketchpad-1.forma.art/address/0x1bC036834BA66EC8073Ced8c1d9490AD67A3A0bC)
 ## 🏆 Hackathon Specific Achievements
 
 - Implemented novel influence-based rarity system
