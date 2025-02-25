@@ -150,6 +150,21 @@
       "address": "0x6fd7eac0c417D068A424d0ef5eF9d3b058c05580",
       "txHash": "0x33461a04b697dc20a025eb58628f26eb11c0d531d23232316767915ea5c3a22a",
       "kind": "uups"
+    },
+    {
+      "address": "0x428151DDB2079De77cC9737e5149b077893E39fF",
+      "txHash": "0xa1cbb8f19d8812114a7d574a1f43508ab4ee4a617b244c659abe46f14ec7a54c",
+      "kind": "uups"
+    },
+    {
+      "address": "0x15558b1214FEA5D83eBB0f27889C98Bfae3DCD1b",
+      "txHash": "0xe08b31c93a95c738e411d2c3db6b20aa4393a6b54e582fa1ab4ed336701cc66c",
+      "kind": "uups"
+    },
+    {
+      "address": "0x4Bc6C96b6996ecFDF55059d091b38A5EF2836aA0",
+      "txHash": "0xadf11292f9feb25d88aca1b16208c2db9553f639a2212d245d4c0fccf6bcfc02",
+      "kind": "uups"
     }
   ],
   "impls": {
@@ -10727,6 +10742,547 @@
               "label": "_owner",
               "type": "t_address",
               "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "ca83b0c38074df202922899af38334561e9a98d3922348bb7e47cde576802f11": {
+      "address": "0x60E44839EB4357dC752bfc8680aC6C0351F9f378",
+      "txHash": "0x771722797e7b5fe8f6b2955b4704dcaafabaf08ef3fac19567690395b50a6513",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "_contractMetadataCemented",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "ContractMetadata",
+            "src": "@forma-dev\\sdk\\contracts\\metadata\\ContractMetadata.sol:14"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_enum(TokenType)605": {
+            "label": "enum TokenType",
+            "members": [
+              "ERC721",
+              "ERC1155"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_address,t_uint256)))": {
+            "label": "mapping(address => mapping(uint256 => mapping(address => uint256)))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_mapping(t_uint256,t_uint256)))": {
+            "label": "mapping(uint256 => mapping(address => mapping(uint256 => uint256)))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(uint256 => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Drop)2906_storage)": {
+            "label": "mapping(uint256 => struct SimpleDropUpgradeable.Drop)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(TieredPricing)2941_storage)": {
+            "label": "mapping(uint256 => struct SimpleDropUpgradeable.TieredPricing)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(ContractMetadataStorage)777_storage": {
+            "label": "struct ContractMetadataUpgradeable.ContractMetadataStorage",
+            "members": [
+              {
+                "label": "_cemented",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Drop)2906_storage": {
+            "label": "struct SimpleDropUpgradeable.Drop",
+            "members": [
+              {
+                "label": "dropId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "creator",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "recipient",
+                "type": "t_address_payable",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "token",
+                "type": "t_struct(Token)618_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "maxAllowed",
+                "type": "t_uint32",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "maxPerWallet",
+                "type": "t_uint32",
+                "offset": 4,
+                "slot": "6"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint48",
+                "offset": 8,
+                "slot": "6"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint48",
+                "offset": 14,
+                "slot": "6"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "minted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "merkleRoot",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "maxPerBlock",
+                "type": "t_uint32",
+                "offset": 0,
+                "slot": "10"
+              },
+              {
+                "label": "maxPerToken",
+                "type": "t_uint32",
+                "offset": 4,
+                "slot": "10"
+              },
+              {
+                "label": "reserves",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "11"
+              },
+              {
+                "label": "reservesMinted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "12"
+              }
+            ],
+            "numberOfBytes": "416"
+          },
+          "t_struct(InitializableStorage)1372_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Ownable2StepStorage)1279_storage": {
+            "label": "struct Ownable2StepUpgradeable.Ownable2StepStorage",
+            "members": [
+              {
+                "label": "_pendingOwner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)1321_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(SimpleAllowListStorage)3326_storage": {
+            "label": "struct SimpleAllowListUpgradeable.SimpleAllowListStorage",
+            "members": [
+              {
+                "label": "_allowed",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(SimpleDropStorage)2993_storage": {
+            "label": "struct SimpleDropUpgradeable.SimpleDropStorage",
+            "members": [
+              {
+                "label": "_nextDropId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_drops",
+                "type": "t_mapping(t_uint256,t_struct(Drop)2906_storage)",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_mints",
+                "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_platformFee",
+                "type": "t_uint16",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_platformFeeRecipient",
+                "type": "t_address_payable",
+                "offset": 2,
+                "slot": "3"
+              },
+              {
+                "label": "_blockMints",
+                "type": "t_mapping(t_uint256,t_mapping(t_address,t_mapping(t_uint256,t_uint256)))",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_nextTieredPricingId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "_tieredPricing",
+                "type": "t_mapping(t_uint256,t_struct(TieredPricing)2941_storage)",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "_dropTieredPricing",
+                "type": "t_mapping(t_uint256,t_uint256)",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "_tokenMints",
+                "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "_walletTokenMints",
+                "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_address,t_uint256)))",
+                "offset": 0,
+                "slot": "9"
+              }
+            ],
+            "numberOfBytes": "320"
+          },
+          "t_struct(TieredPricing)2941_storage": {
+            "label": "struct SimpleDropUpgradeable.TieredPricing",
+            "members": [
+              {
+                "label": "minted",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "currentIdx",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tiers",
+                "type": "t_array(t_uint256)dyn_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "prices",
+                "type": "t_array(t_uint256)dyn_storage",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(Token)618_storage": {
+            "label": "struct Token",
+            "members": [
+              {
+                "label": "tokenAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenType",
+                "type": "t_enum(TokenType)605",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint32": {
+            "label": "uint32",
+            "numberOfBytes": "4"
+          },
+          "t_uint48": {
+            "label": "uint48",
+            "numberOfBytes": "6"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          }
+        },
+        "namespaces": {
+          "erc7201:forma.storage.SimpleDropStorage": [
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_nextDropId",
+              "type": "t_uint256",
+              "src": "contracts\\SimpleDropUpgradeable.sol:68",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_drops",
+              "type": "t_mapping(t_uint256,t_struct(Drop)2906_storage)",
+              "src": "contracts\\SimpleDropUpgradeable.sol:69",
+              "offset": 0,
+              "slot": "1"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_mints",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+              "src": "contracts\\SimpleDropUpgradeable.sol:71",
+              "offset": 0,
+              "slot": "2"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_platformFee",
+              "type": "t_uint16",
+              "src": "contracts\\SimpleDropUpgradeable.sol:72",
+              "offset": 0,
+              "slot": "3"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_platformFeeRecipient",
+              "type": "t_address_payable",
+              "src": "contracts\\SimpleDropUpgradeable.sol:73",
+              "offset": 2,
+              "slot": "3"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_blockMints",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_mapping(t_uint256,t_uint256)))",
+              "src": "contracts\\SimpleDropUpgradeable.sol:75",
+              "offset": 0,
+              "slot": "4"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_nextTieredPricingId",
+              "type": "t_uint256",
+              "src": "contracts\\SimpleDropUpgradeable.sol:76",
+              "offset": 0,
+              "slot": "5"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_tieredPricing",
+              "type": "t_mapping(t_uint256,t_struct(TieredPricing)2941_storage)",
+              "src": "contracts\\SimpleDropUpgradeable.sol:77",
+              "offset": 0,
+              "slot": "6"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_dropTieredPricing",
+              "type": "t_mapping(t_uint256,t_uint256)",
+              "src": "contracts\\SimpleDropUpgradeable.sol:79",
+              "offset": 0,
+              "slot": "7"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_tokenMints",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+              "src": "contracts\\SimpleDropUpgradeable.sol:81",
+              "offset": 0,
+              "slot": "8"
+            },
+            {
+              "contract": "SimpleDropUpgradeable",
+              "label": "_walletTokenMints",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_address,t_uint256)))",
+              "src": "contracts\\SimpleDropUpgradeable.sol:83",
+              "offset": 0,
+              "slot": "9"
+            }
+          ],
+          "erc7201:forma.storage.SimpleAllowList": [
+            {
+              "contract": "SimpleAllowListUpgradeable",
+              "label": "_allowed",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts\\access\\SimpleAllowListUpgradeable.sol:9",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable2Step": [
+            {
+              "contract": "Ownable2StepUpgradeable",
+              "label": "_pendingOwner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\Ownable2StepUpgradeable.sol:23",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:forma.storage.ContractMetadataStorage": [
+            {
+              "contract": "ContractMetadataUpgradeable",
+              "label": "_cemented",
+              "type": "t_bool",
+              "src": "@forma-dev\\sdk\\contracts\\upgradeable\\metadata\\ContractMetadataUpgradeable.sol:12",
               "offset": 0,
               "slot": "0"
             }
