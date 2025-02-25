@@ -10,7 +10,7 @@ async function main() {
   const symbol = "MAG";
   const royaltyRecipient = "0x75B128c7AE715Ffe273433DbfF63097FDC10804d";
   const royaltyFee = 750;
-  const collectionSize = 100;
+  const collectionSize = 10;
 
   // Deploy the contract
   const GenerativeERC721Upgradeable = await ethers.getContractFactory("GenerativeERC721Upgradeable");

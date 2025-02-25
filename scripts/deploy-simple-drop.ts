@@ -6,8 +6,8 @@ import { ethers, upgrades } from "hardhat";
   console.log("Current signer's address:", signer.address);
 
   const owner = signer.address;
-  const name = "Modularium Drops";
-  const platformRecipient = "0x1f95167C220d7B19EcA466Af76C54B1dB39c9186";
+  const name = "Mammoth Art Drops";
+  const platformRecipient = "0x75B128c7AE715Ffe273433DbfF63097FDC10804d";
   const platformFee = 1000;
 
   const SimpleDropUpgradeable = await ethers.getContractFactory("SimpleDropUpgradeable");

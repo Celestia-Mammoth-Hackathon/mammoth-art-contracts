@@ -6,7 +6,7 @@ async function main() {
   console.log("Using signer:", signer.address);
 
   // Replace with your deployed contract address
-  const contractAddress = "0x6fd7eac0c417D068A424d0ef5eF9d3b058c05580";
+  const contractAddress = "0x15558b1214FEA5D83eBB0f27889C98Bfae3DCD1b";
   const contract = await ethers.getContractAt("GenerativeERC721Upgradeable", contractAddress);
 
   try {
@@ -16,8 +16,9 @@ async function main() {
       const setContractMetadataTx = await contract["setContractMetadata((string,string,string,string,string,string,string[]))"]({
         name: "Generative Art Collection",
         description: "This is a collection of generative art.",
+        image: "ipfs://QmSFG6P5X6KSZmSi2R9zQLmNoVRW1RgEQXvffQbJFWWLky",
         // image: "ipfs://QmTVNpEpJewJ6J8evsZ4CTs3AMjtutj9a81GFypHTcCYdY",
-        image: "ipfs://QmTPD8efGxzv4HpQfstTf3nVRXzvzTQkQuZ4EsFPJZzNa6",
+        // image: "ipfs://QmTPD8efGxzv4HpQfstTf3nVRXzvzTQkQuZ4EsFPJZzNa6",
         bannerImage: "",
         featuredImage: "",
         externalLink: "",
@@ -63,7 +64,7 @@ async function main() {
     // 3. Grant minter role to signer
     try {
       console.log("\nGranting minter role...");
-      const grantMinterTx = await contract.grantMinter("0x1bC036834BA66EC8073Ced8c1d9490AD67A3A0bC");
+      const grantMinterTx = await contract.grantMinter("0x4Bc6C96b6996ecFDF55059d091b38A5EF2836aA0");
       await grantMinterTx.wait();
       console.log("✅ Minter role granted successfully");
     } catch (error: any) {
@@ -76,9 +77,10 @@ async function main() {
       console.log("\nSetting influencing NFTs...");
       const influencingAddresses = [
         "0x62650662EBB109Fd1E86CBdC0b3126C5895ee492",
-        "0x063eA336c397d8112bcd7707164148cCCBEfB218"
+        "0x77De4D1F147EA3863E80E4d08b5c3433892D0068",
+        "0x063eA336c397d8112bcd7707164148cCCBEfB218",
       ];
-      const influencingTokenIds = [[6, 3, 2], [0, 1, 2]];
+      const influencingTokenIds = [[6, 3, 2], [0], [0]];
 
       const setInfluencingTx = await contract.setInfluencingNFTs(
         influencingAddresses,

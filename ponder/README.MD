@@ -84,7 +84,7 @@ yarn dev
 ## 🌐 Deployment
 - **Indexer API**: [https://mammoth-bros-contracts-production.up.railway.app/](https://mammoth-bros-contracts-production.up.railway.app/)
 - **Contracts Being Indexed**:
-  - [Drop Contract](https://explorer.sketchpad-1.forma.art/address/0x1bC036834BA66EC8073Ced8c1d9490AD67A3A0bC)
+  - [Drop Contract](https://explorer.sketchpad-1.forma.art/address/0x4Bc6C96b6996ecFDF55059d091b38A5EF2836aA0)
   - [All Generative ERC721]
   - [All accounts interacting with the contracts]
   - [All nft minted from the contracts]
