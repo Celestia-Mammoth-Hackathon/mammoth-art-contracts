@@ -47,6 +47,34 @@ function reveal(uint256[] calldata _tokenIds, string[] calldata _metadata) exter
 }
 ```
 
+
+### 🎯 Dynamic Ranking System with Forma Collections
+
+Our platform introduces an innovative ranking system that leverages existing Forma collections as influence factors:
+
+- **Collection-Based Influence**:
+  - NFT rankings are determined by ownership of specific Forma collections
+  - Each influencing collection can affect the ranking calculation
+  - Multiple NFTs from the same collection can stack influence
+  - Real-time ranking updates based on ownership changes
+
+```solidity
+// Example of ranking calculation using Forma collections
+struct InfluencingNFT {
+    address tokenAddress;  // Forma collection address
+    uint256 tokenId;      // Specific NFT ID from collection
+}
+
+function _calculateRanking(address _minter, uint256 collectionSize) internal view returns (uint256) {
+    // Count influencing NFTs owned by minter
+
+    // Check ownership of specified Forma collections
+
+    // Generate base ranking and apply boost based on owned NFTs
+}
+```
+
+
 ## 🚀 Getting Started
 
 ### Prerequisites
