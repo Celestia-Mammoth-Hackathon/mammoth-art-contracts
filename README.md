@@ -96,7 +96,7 @@ cp .env.example .env
 
 # Build contracts
 yarn build
-
+```
 
 ## 🧪 Testing
 
@@ -114,7 +114,6 @@ yarn testnet:deploy:simple-drop
 yarn testnet:test:generative-erc721
 yarn testnet:create-drop
 yarn testnet:mint-drop
-
 ```
 
 ## 📊 Performance & Security
