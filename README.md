@@ -30,7 +30,7 @@ MammothArt introduces a groundbreaking approach to NFT creation and valuation th
   - Dynamic metadata management using Forma's CompressedJSON
   - Influence calculation system
 
-### On-Chain Metadata System
+### 💾 On-Chain Metadata System
 
 ```solidity
 // Example of on-chain metadata storage using Forma's CompressedJSON
