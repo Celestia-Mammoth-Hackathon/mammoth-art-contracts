@@ -97,25 +97,24 @@ cp .env.example .env
 # Build contracts
 yarn build
 
-# Run tests
-yarn test
-
-# Deploy to testnet
-yarn deploy:testnet
-```
 
 ## 🧪 Testing
 
 Our comprehensive test suite covers:
-- Influence system calculations
-- Minting mechanics
-- Metadata management
-- Access control
-- Upgrade mechanisms
+- Deploying generative ERC-721 contracts
+- Deploying drop contract
+- Testing generative ERC-721 contracts
+- Creating drop
+- Minting drop
 
 Run tests with:
 ```bash
-yarn test
+yarn testnet:deploy:generative-erc721
+yarn testnet:deploy:simple-drop
+yarn testnet:test:generative-erc721
+yarn testnet:create-drop
+yarn testnet:mint-drop
+
 ```
 
 ## 📊 Performance & Security
